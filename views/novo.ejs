@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><%= title %></h1>
+    <p>Preencha os dasos abaixo para salvar o cliente.</p>
+    <form action="<%= action %>" method="post">
+        <p>
+            <label for="name">Nome:
+                <input type="text" name="nome" id="nome" value="<%= doc.idade %>" required/>
+            </label>
+        </p>
+            <p>
+                <label for="idade">Idade: <input type="number" name="idade" id="idade" value="<%= doc.idade %>"/>
+                    </label>
+            </p>
+            <p>
+                <label for="uf">
+                    <select name="uf" id="uf">
+                        <option <% if (doc.uf == 'PR') { %> selected <% } %>>PR</option>
+                        <option <% if (doc.uf == 'RS') { %> selected <% } %>>RS</option>
+                        <option <% if (doc.uf == 'SC') { %> selected <% } %>>SC</option>
+                        <option <% if (doc.uf == 'SP') { %> selected <% } %>>Bahnschrift Light SemiCondensedBahnschrift Light SemiCondensedSP</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <a href="/">Cancelar</a> | <input type="submit" value="Salvar">
+            </p>
+        
+    </form>
+</body>
+</html>
